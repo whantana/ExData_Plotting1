@@ -18,9 +18,8 @@ get_data_of_interest <- function(dataset_path,start_date,end_date,columns) {
                   "Sub_metering_1","Sub_metering_2","Sub_metering_3")
     all_classes = c(rep("character",2),rep("double",7))
     
-    source("use_data_table_pkg.R")
     # Decide on using data.table or data.frames
-    if(use_data_table_pkg()) {
+    if("data.table" %in% rownames(installed.packages())) {
         # Using the data.table pkgs
         library(data.table)
         
