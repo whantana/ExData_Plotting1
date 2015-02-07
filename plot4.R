@@ -36,5 +36,5 @@ plot4 <- function() {
     
     # call copy2png to get the png file at the folders directory
     source("dev.copy2png.R")
-    dev.copy2png("plot3.png")
+    dev.copy2png("plot4.png")
 }
