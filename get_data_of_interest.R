@@ -74,8 +74,7 @@ get_data_of_interest <- function(dataset_path,start_date,end_date,columns) {
         # first read two lines from the input file
         # to get the header and the first date
         first_line_df <- read.csv2(dataset_path,nrows=1)
-        col_names <- names(first_line_dt)
-        first_date_time <- with(first_line_dt, paste(Date,Time))
+        first_date_time <- with(first_line_df, paste(Date,Time))
         fd_psx <- strptime(first_date_time,"%d/%m/%Y %H:%M:%S")
         
         # from the assumptions above we can calculate the first
